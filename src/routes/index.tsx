@@ -1,11 +1,16 @@
 import { Route, Routes } from "react-router-dom";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
+import Dashboard from "../pages/Dashboard";
 
-export const RoutesMain = () => {
+const RoutesMain = () => {
   return (
     <Routes>
-      <Route path="/" element={<h1>Login</h1>}></Route>
-      <Route path="/register" element={<h1>Registe</h1>}></Route>
-      <Route path="/dashboard" element={<h1>Dashboard</h1>}></Route>
+      <Route path="/" element={<Login />}></Route>
+      <Route path="/register" element={<Register />}></Route>
+      <Route path="/dashboard" element={<Dashboard />}></Route>
     </Routes>
   );
 };
+
+export default RoutesMain;
