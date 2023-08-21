@@ -45,4 +45,8 @@ export default createGlobalStyle`
   button {
     cursor: pointer;
   }
+
+  button:hover {
+    filter: brightness(0.9);
+  }
 `;
