@@ -19,8 +19,9 @@ const UserProvider = ({ children }: iContext) => {
 
   const userLogin = async (form: loginData) => {
     const load = toast.loading("Aguarde um instante...");
+    console.log(form);
     try {
-      const response = await api.post("login", form);
+      const response = await api.post("/auth", form);
       localStorage.setItem("@TOKEN", response.data.token);
       toast.update(load, {
         render: "Logado com sucesso!",
