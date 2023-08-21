@@ -24,7 +24,7 @@ const UserProvider = ({ children }: iContext) => {
       const response = await api.post("/auth", form);
       localStorage.setItem("@TOKEN", response.data.token);
       toast.update(load, {
-        render: "Logado com sucesso!",
+        render: "Login efetuado com sucesso!",
         type: "success",
         isLoading: false,
         theme: "light",
