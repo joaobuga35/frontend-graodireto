@@ -36,6 +36,10 @@ export default createGlobalStyle`
     font-family: 'Inter', sans-serif;
     font-size: 1.6rem;
   }
+  body{
+    transition: 0.8s ease;
+    animation: smoothShow 800ms;
+  }
   h1, h2, h3, h4, h5, h6, strong {
     font-weight: 500;
   }
@@ -49,4 +53,13 @@ export default createGlobalStyle`
   button:hover {
     filter: brightness(0.9);
   }
+
+  @keyframes smoothShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 `;
