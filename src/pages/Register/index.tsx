@@ -11,7 +11,7 @@ const Register = () => {
   const isWide = useMediaQuery({ minWidth: 1000 });
   return (
     <DivRegister>
-      <FormStyle noValidate width={isWide ? "42rem" : "35rem"} height={"48rem"}>
+      <FormStyle noValidate width={isWide ? "48rem" : "35rem"} height={"51rem"}>
         <Logo />
         <div className="divInfoRegister">
           <h3>Cadastro</h3>

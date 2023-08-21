@@ -6,6 +6,7 @@ const LogoTitle = styled.header`
     font-size: 40px;
     font-weight: 700;
     color: #333333;
+    margin-top: 15px;
     margin-bottom: 15px;
   }
 

@@ -11,7 +11,7 @@ const Login = () => {
   const isWide = useMediaQuery({ minWidth: 1000 });
   return (
     <DivLogin>
-      <FormStyle noValidate width={isWide ? "42rem" : "35rem"} height={"46rem"}>
+      <FormStyle noValidate width={isWide ? "48rem" : "35rem"} height={"45rem"}>
         <Logo />
         <h3>Login</h3>
         <DivInputBox>
