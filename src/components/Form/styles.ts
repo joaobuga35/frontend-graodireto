@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-interface iForm {
+interface IForm {
   height: string;
   width: string;
 }
 
-const FormStyle = styled.form<iForm>`
+const FormStyle = styled.form<IForm>`
   width: ${(props) => props.width};
   padding: 20px;
   height: ${(props) => props.height};
@@ -30,7 +30,21 @@ const FormStyle = styled.form<iForm>`
   }
   .divInfoRegister {
     display: flex;
+    align-items: baseline;
     justify-content: space-between;
+    margin-top: 40px;
+  }
+
+  .redirectedLogin {
+    text-decoration: none;
+    color: var(--gray-300);
+    font-size: 16px;
+    width: 200px;
+    height: 40px;
+
+    :hover {
+      text-decoration: underline var(--gray-300);
+    }
   }
 
   a {
@@ -39,7 +53,7 @@ const FormStyle = styled.form<iForm>`
     align-items: center;
     height: 45px;
     width: 100%;
-    border-radius: 0.8rem;
+    border-radius: 12px;
     text-decoration: none;
     color: var(--gray-300);
 
@@ -50,16 +64,6 @@ const FormStyle = styled.form<iForm>`
 
   a:hover {
     filter: brightness(0.9);
-  }
-
-  .redirectedLogin {
-    text-decoration: none;
-    color: var(--gray-300);
-    font-size: 1.4rem;
-
-    :hover {
-      text-decoration: underline var(--gray-300);
-    }
   }
 `;
 
