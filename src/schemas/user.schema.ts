@@ -7,7 +7,6 @@ const userSchema = z
       .min(3, "O nome deve ter no mínimo 3 caracteres")
       .max(50, "O nome deve ter no máximo 50 caracteres")
       .nonempty("Nome é obrigatório"),
-    cpf: z.string().nonempty("CPF é obrigatório"),
     email: z.string().email("Deve ser um e-mail válido"),
     password: z
       .string()
