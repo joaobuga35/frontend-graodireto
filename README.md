@@ -1,4 +1,4 @@
-<h1 align="center"> DicaFoods API</h1>
+<h1 align="center"> DicaFoods</h1>
 
 <div align="center">
   
