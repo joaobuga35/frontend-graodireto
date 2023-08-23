@@ -1,27 +1,64 @@
-# React + TypeScript + Vite
+<h1 align="center"> DicaFoods API</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
+  
+![ReactJS]([https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)) ![Styled-Components]([https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)) ![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=fff) 	
 
-Currently, two official plugins are available:
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+<h2>Índice</h2>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. [ Sobre ](#sobre)
+2. [ Tecnologias](#techs)
+3. [ Instalação ](#install)
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+<a name="sobre"></a>
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 1. Sobre
+Este projeto foi gerado com ReactJS.
+
+Esta é uma Aplicação Front-End de sugestão de restaurantes e pratos com ReactJS. 
+
+Através do consumo da API DicaFoods, o usuário consegue interagir e visualizar restaurantes e pratos, assim como filtrar quais o atraem mais.
+
+A aplicação possui página de login,registro e uma dashboard interativa com modais e filtros.
+
+### 1.1 Deploy da Aplicação para teste no Front-end
+
+- <a name="DicaFoods" href="https://grao-app.vercel.app/" target="_blank">DicaFoods - Live</a>
+
+<a name="techs"></a>
+
+## 2. Tecnologias
+
+- <a name="react" href="https://react.dev/" target="_blank">ReactJS</a>
+- <a name="styled" href="https://styled-components.com/" target="_blank">Styled-components</a>
+
+<a name="install"></a>
+## 3. Instalação e uso
+
+## 3.1 Ambiente de desenvolvimento BACK-END
+  <h4>1º Passo</h4>
+  <p>Acesse o seguinte repositório: <a name="backend" href="https://github.com/joaobuga35/backend-graodireto" target="_blank">Repositório Back-end</a> </p>
+  <p>Rode o back-end em sua máquina local primerio antes de utilizar o front-end!</p>
+  <p>Siga as instruções do README para poder testar e contribuir com o projeto.</p>
+
+### 3.2 Pré-Requisitos:
+  <h4>1º Passo</h4>
+  <h5>Antes de começar, certifique-se de ter instalado o Node.js em sua máquina. Acima da versão 16</h3>
+  <p>Faça um fork deste repositório, depois clone o fork em sua máquina.</p>
+
+
+  <h4>2º Passo - Configurando o Front-end</h4>
+  - Rode os seguintes comandos: 
+  
+  ```bash
+  #instala todas as dependências necessárias
+  $ npm install
+    
+  # development, você consegue rodar a aplicação em sua máquina local
+  $ npm run dev
+  ```
+
