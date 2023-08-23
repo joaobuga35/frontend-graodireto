@@ -23,19 +23,6 @@ const DashProvider = ({ children }: iContext) => {
       setRestaurants(response.data);
     } catch (error) {}
   };
-
-  //   async function getUser() {
-  //     try {
-  //       let decoded: any = jwt_decode(token);
-  //       let idUser: string = decoded.sub;
-  //       const response = await api.get<IContacts>(`clients/${idUser}`, {
-  //         headers: {
-  //           Authorization: `Bearer ${token}`,
-  //         },
-  //       });
-  //       setUser(response.data.name);
-  //     } catch (error) {}
-  //   }
   useEffect(() => {
     getRestaurants();
   }, [token, restaurants]);
