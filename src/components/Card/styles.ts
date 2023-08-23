@@ -6,10 +6,6 @@ const LiCard = styled.li`
   border: 2px solid var(--gray-100);
   border-radius: 4px;
   background-color: var(--color-background);
-
-  :hover {
-    border: 2px solid var(--color-primary);
-  }
 `;
 
 const DivImage = styled.div`

@@ -1,6 +1,6 @@
 import Card from "../../components/Card";
 import HeaderDash from "../../components/Header";
-import { DivTitleDashboard, MainDashboard } from "./styles";
+import { DivTitleDashboard, List, MainDashboard } from "./styles";
 
 const Dashboard = () => {
   return (
@@ -13,12 +13,16 @@ const Dashboard = () => {
             Encontre o melhor restaurante para o seu gosto, tudo em um só lugar!
           </p>
         </DivTitleDashboard>
-        <ul>
+        <List>
           <Card />
           <Card />
           <Card />
           <Card />
-        </ul>
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </List>
       </MainDashboard>
     </>
   );

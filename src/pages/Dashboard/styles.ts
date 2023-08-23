@@ -17,6 +17,8 @@ const MainDashboard = styled.main`
 `;
 
 const DivTitleDashboard = styled.div`
+  margin-top: 20px;
+  margin-bottom: 40px;
   h1 {
     color: var(--color-primary);
     font-size: 18px;
@@ -28,4 +30,21 @@ const DivTitleDashboard = styled.div`
     font-size: 14px;
   }
 `;
-export { MainDashboard, DivTitleDashboard };
+
+const List = styled.ul`
+  display: flex;
+  gap: 20px;
+  width: 400px;
+  overflow-x: auto;
+
+  @media (min-width: 500px) {
+    width: 100%;
+  }
+
+  @media (min-width: 1024px) {
+    width: 100%;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+`;
+export { MainDashboard, DivTitleDashboard, List };
