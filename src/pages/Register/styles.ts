@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const DivRegister = styled.div`
+const DivRegister = styled.div`
   padding: 2rem;
   width: 100vw;
   height: 100vh;
@@ -8,3 +8,5 @@ export const DivRegister = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+export { DivRegister };

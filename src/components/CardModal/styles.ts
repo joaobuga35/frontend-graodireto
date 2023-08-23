@@ -1,15 +1,15 @@
 import { styled } from "styled-components";
 
-const LiCard = styled.li`
+const LiCardModal = styled.li`
   min-width: 250px;
   max-width: 250px;
-  height: 271px;
+  height: 315px;
   border: 2px solid var(--gray-100);
   border-radius: 4px;
   background-color: var(--color-background);
 `;
 
-const DivImage = styled.div`
+const DivImageModal = styled.div`
   width: 100%;
   height: 150px;
   display: flex;
@@ -22,7 +22,7 @@ const DivImage = styled.div`
   }
 `;
 
-const DivInfos = styled.div`
+const DivInfosModal = styled.div`
   margin-top: 20px;
   padding-left: 10px;
   padding-right: 10px;
@@ -35,7 +35,6 @@ const DivInfos = styled.div`
   h2 {
     font-size: 18px;
     color: var(--gray-600);
-    white-space: nowrap;
   }
 
   span {
@@ -49,4 +48,4 @@ const DivInfos = styled.div`
   }
 `;
 
-export { LiCard, DivImage, DivInfos };
+export { LiCardModal, DivImageModal, DivInfosModal };

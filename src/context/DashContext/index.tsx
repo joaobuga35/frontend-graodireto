@@ -10,6 +10,8 @@ const DashProvider = ({ children }: iContext) => {
   const [restaurants, setRestaurants] = useState<IRestaurant[]>([]);
   const [searchList, setSearchList] = useState<IRestaurant[]>([]);
   const [input, setInput] = useState("");
+  const [modal, setModal] = useState(false);
+  const [filterRestaurants, setFilterRestaurants] = useState<IRestaurant[]>([]);
 
   const getRestaurants = async () => {
     try {
@@ -48,6 +50,10 @@ const DashProvider = ({ children }: iContext) => {
         setSearchList,
         input,
         setInput,
+        modal,
+        setModal,
+        filterRestaurants,
+        setFilterRestaurants,
       }}
     >
       {children}

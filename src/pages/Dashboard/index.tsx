@@ -3,11 +3,13 @@ import Card from "../../components/Card";
 import HeaderDash from "../../components/Header";
 import { DivTitleDashboard, List, MainDashboard } from "./styles";
 import { DashContext } from "../../context/DashContext";
+import Modal from "../../components/Modal";
 
 const Dashboard = () => {
-  const { restaurants, searchList } = useContext(DashContext);
+  const { restaurants, searchList, modal } = useContext(DashContext);
   return (
     <>
+      {modal && <Modal />}
       <HeaderDash />
       <MainDashboard>
         <DivTitleDashboard>
@@ -25,7 +27,7 @@ const Dashboard = () => {
         ) : (
           <List>
             {restaurants.map((elem) => (
-              <Card restaurant={elem} />
+              <Card key={elem.id} restaurant={elem} />
             ))}
           </List>
         )}

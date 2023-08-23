@@ -8,6 +8,10 @@ interface IDashContextType {
   setSearchList: Dispatch<SetStateAction<IRestaurant[]>>;
   input: string;
   setInput: Dispatch<SetStateAction<string>>;
+  modal: boolean;
+  setModal: Dispatch<SetStateAction<boolean>>;
+  filterRestaurants: IRestaurant[];
+  setFilterRestaurants: Dispatch<SetStateAction<IRestaurant[]>>;
 }
 
 interface IAddress {
