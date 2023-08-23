@@ -1,6 +1,13 @@
+import { Dispatch, SetStateAction } from "react";
+
 interface IDashContextType {
   token: string | null;
   restaurants: IRestaurant[];
+  setRestaurants: Dispatch<SetStateAction<IRestaurant[]>>;
+  searchList: IRestaurant[];
+  setSearchList: Dispatch<SetStateAction<IRestaurant[]>>;
+  input: string;
+  setInput: Dispatch<SetStateAction<string>>;
 }
 
 interface IAddress {
@@ -33,4 +40,4 @@ interface IRestaurant {
   foods: IFood[];
 }
 
-export type { IDashContextType, IRestaurant };
+export type { IDashContextType, IRestaurant, IFood };

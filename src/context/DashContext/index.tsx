@@ -1,3 +1,4 @@
+/* eslint-disable no-empty */
 import { createContext, useEffect, useState } from "react";
 import { IDashContextType, IRestaurant } from "./interfaces";
 import { iContext } from "../UserContext/interfaces";
@@ -7,6 +8,9 @@ const DashContext = createContext<IDashContextType>({} as IDashContextType);
 const DashProvider = ({ children }: iContext) => {
   const token = localStorage.getItem("@TOKEN");
   const [restaurants, setRestaurants] = useState<IRestaurant[]>([]);
+  const [searchList, setSearchList] = useState<IRestaurant[]>([]);
+  const [input, setInput] = useState("");
+
   const getRestaurants = async () => {
     try {
       const response = await api.get<IRestaurant[]>("restaurants", {
@@ -14,11 +18,8 @@ const DashProvider = ({ children }: iContext) => {
           Authorization: `Bearer ${token}`,
         },
       });
-      console.log(response.data);
       setRestaurants(response.data);
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 
   //   async function getUser() {
@@ -35,10 +36,20 @@ const DashProvider = ({ children }: iContext) => {
   //   }
   useEffect(() => {
     getRestaurants();
-  }, [token]);
+  }, [token, restaurants]);
 
   return (
-    <DashContext.Provider value={{ token, restaurants }}>
+    <DashContext.Provider
+      value={{
+        token,
+        restaurants,
+        setRestaurants,
+        searchList,
+        setSearchList,
+        input,
+        setInput,
+      }}
+    >
       {children}
     </DashContext.Provider>
   );

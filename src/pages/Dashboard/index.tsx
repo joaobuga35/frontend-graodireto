@@ -5,7 +5,7 @@ import { DivTitleDashboard, List, MainDashboard } from "./styles";
 import { DashContext } from "../../context/DashContext";
 
 const Dashboard = () => {
-  const { restaurants } = useContext(DashContext);
+  const { restaurants, searchList } = useContext(DashContext);
   return (
     <>
       <HeaderDash />
@@ -16,11 +16,19 @@ const Dashboard = () => {
             Encontre o melhor restaurante para o seu gosto, tudo em um só lugar!
           </p>
         </DivTitleDashboard>
-        <List>
-          {restaurants.map((elem) => (
-            <Card restaurant={elem} />
-          ))}
-        </List>
+        {searchList.length > 0 ? (
+          <List>
+            {searchList.map((elem) => (
+              <Card restaurant={elem} />
+            ))}
+          </List>
+        ) : (
+          <List>
+            {restaurants.map((elem) => (
+              <Card restaurant={elem} />
+            ))}
+          </List>
+        )}
       </MainDashboard>
     </>
   );

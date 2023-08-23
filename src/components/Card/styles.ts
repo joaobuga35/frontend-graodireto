@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 
 const LiCard = styled.li`
   min-width: 250px;
+  max-width: 250px;
   height: 271px;
   border: 2px solid var(--gray-100);
   border-radius: 4px;
@@ -17,7 +18,7 @@ const DivImage = styled.div`
   img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
 `;
 

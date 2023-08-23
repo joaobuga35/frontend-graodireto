@@ -1,6 +1,7 @@
 import { DivImage, DivInfos, LiCard } from "./styles";
 import ButtonDefault from "../../styles/button";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Card = ({ restaurant }: any) => {
   return (
     <>
