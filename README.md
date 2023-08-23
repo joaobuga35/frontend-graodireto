@@ -45,7 +45,7 @@ A aplicação possui página de login,registro e uma dashboard interativa com mo
 ## 3.1 Ambiente de desenvolvimento BACK-END
   <h4>1º Passo</h4>
   <p>Acesse o seguinte repositório: <a name="backend" href="https://github.com/joaobuga35/backend-graodireto" target="_blank">Repositório Back-end</a> </p>
-  <p>Rode o back-end em sua máquina local primerio antes de utilizar o front-end!</p>
+  <p>Rode o back-end em sua máquina local primeiro antes de utilizar o front-end!</p>
   <p>Siga as instruções do README para poder testar e contribuir com o projeto.</p>
 
 ### 3.2 Pré-Requisitos:
