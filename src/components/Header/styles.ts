@@ -80,4 +80,22 @@ const SearchInput = styled.input<IStateStyled>`
   }
 `;
 
-export { HeaderMain, SearchInput, DivHeader };
+const DivInput = styled.div<IStateStyled>`
+  position: relative;
+
+  span {
+    position: absolute;
+    top: 13px;
+    right: 9px;
+    display: ${(props) => (props.show ? "block" : "none")};
+    cursor: pointer;
+  }
+
+  @media (min-width: 768px) {
+    span {
+      display: block;
+    }
+  }
+`;
+
+export { HeaderMain, SearchInput, DivHeader, DivInput };

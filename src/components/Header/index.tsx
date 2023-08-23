@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { DivHeader, HeaderMain, SearchInput } from "./styles";
+import { DivHeader, DivInput, HeaderMain, SearchInput } from "./styles";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import Logo from "../Logo";
 import { useContext, useState } from "react";
@@ -17,7 +17,10 @@ const HeaderDash = () => {
         <HeaderMain>
           <Logo />
           <div className="divIcons">
-            <SearchInput placeholder="Digite sua pesquisa..." />
+            <DivInput>
+              <SearchInput placeholder="Digite sua pesquisa..." />
+              <span>X</span>
+            </DivInput>
             <Link to={"/"} onClick={() => remove()}>
               <ExitToAppIcon className="icons" />
             </Link>
@@ -37,7 +40,10 @@ const HeaderDash = () => {
               </Link>
             </div>
           </HeaderMain>
-          <SearchInput show={show} placeholder="Digite sua pesquisa..." />
+          <DivInput show={show}>
+            <SearchInput show={show} placeholder="Digite sua pesquisa..." />
+            <span>X</span>
+          </DivInput>
         </>
       )}
     </DivHeader>
