@@ -1,16 +1,15 @@
 import { DivImage, DivInfos, LiCard } from "./styles";
 import ButtonDefault from "../../styles/button";
-import { IRestaurant } from "./interfaces";
 
-const Card = ({ name, image }: IRestaurant) => {
+const Card = ({ restaurant }: any) => {
   return (
     <>
-      <LiCard>
+      <LiCard key={restaurant.id} id={restaurant.id}>
         <DivImage>
-          <img src={image} alt="image" />
+          <img src={restaurant.image} alt="image" />
         </DivImage>
         <DivInfos>
-          <h2>{name}</h2>
+          <h2>{restaurant.name}</h2>
           <ButtonDefault colorBtn={"buttonGreen"} width={"106px"}>
             {" "}
             Ver detalhes

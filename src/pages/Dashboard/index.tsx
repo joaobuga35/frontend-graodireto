@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import Card from "../../components/Card";
 import HeaderDash from "../../components/Header";
 import { DivTitleDashboard, List, MainDashboard } from "./styles";
+import { DashContext } from "../../context/DashContext";
 
 const Dashboard = () => {
+  const { restaurants } = useContext(DashContext);
   return (
     <>
       <HeaderDash />
@@ -14,14 +17,9 @@ const Dashboard = () => {
           </p>
         </DivTitleDashboard>
         <List>
-          {/* <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card /> */}
+          {restaurants.map((elem) => (
+            <Card restaurant={elem} />
+          ))}
         </List>
       </MainDashboard>
     </>
