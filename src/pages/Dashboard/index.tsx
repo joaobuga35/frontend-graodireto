@@ -14,14 +14,14 @@ const Dashboard = () => {
           </p>
         </DivTitleDashboard>
         <List>
+          {/* <Card />
           <Card />
           <Card />
           <Card />
           <Card />
           <Card />
           <Card />
-          <Card />
-          <Card />
+          <Card /> */}
         </List>
       </MainDashboard>
     </>
