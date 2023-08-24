@@ -25,6 +25,7 @@ const Modal = () => {
           <p>
             {filterRestaurants[0].Address.street},{" "}
             {filterRestaurants[0].Address.number}
+            <span>Telefone: {filterRestaurants[0].phone}</span>
           </p>
         </DivImageAndAddress>
         <ListFood>
