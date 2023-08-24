@@ -75,6 +75,12 @@ const DivImageAndAddress = styled.div`
   p {
     font-size: 18px;
     color: var(--gray-600);
+
+    span {
+      display: block;
+      text-align: center;
+      margin-top: 8px;
+    }
   }
 
   @media (min-width: 768px) {
