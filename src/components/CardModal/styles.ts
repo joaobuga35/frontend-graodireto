@@ -35,11 +35,13 @@ const DivInfosModal = styled.div`
   h2 {
     font-size: 18px;
     color: var(--gray-600);
+    white-space: nowrap;
   }
 
   span {
     font-size: 12px;
     color: var(--gray-300);
+    white-space: nowrap;
   }
 
   p {
