@@ -1,5 +1,5 @@
 /* eslint-disable no-empty */
-import { createContext, useEffect, useState } from "react";
+import { createContext, useCallback, useEffect, useState } from "react";
 import { IDashContextType, IRestaurant } from "./interfaces";
 import { iContext } from "../UserContext/interfaces";
 import api from "../../services/api";
@@ -13,7 +13,7 @@ const DashProvider = ({ children }: iContext) => {
   const [modal, setModal] = useState(false);
   const [filterRestaurants, setFilterRestaurants] = useState<IRestaurant[]>([]);
 
-  const getRestaurants = async () => {
+  const getRestaurants = useCallback(async () => {
     try {
       const response = await api.get<IRestaurant[]>("restaurants", {
         headers: {
@@ -21,12 +21,14 @@ const DashProvider = ({ children }: iContext) => {
         },
       });
       setRestaurants(response.data);
-    } catch (error) {}
-  };
+    } catch (error) {
+      console.error("Error fetching restaurants:", error);
+    }
+  }, [token]);
+
   useEffect(() => {
     getRestaurants();
-  }, [token, restaurants]);
-
+  }, [getRestaurants, restaurants]);
   return (
     <DashContext.Provider
       value={{
